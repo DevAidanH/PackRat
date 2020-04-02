@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>PackRat</title>
+        <!--CSS import-->
+        <link rel="stylesheet" href="CSS/main.css">
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+        <!--Font-Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <!--Nav bar 1-->
+        <div class="header">
+          <div class="icon">
+            <h1><a href="index.html">PackRat</a></h1>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Type in and hit enter">
+          </div>
+          <div class="addButton">
+            <button onclick="javascript:window.location='addItem.html'">Add item</button>
+          </div>
+          <div class="userSection">
+            <i class="far fa-user"></i>
+            <p>User</p>
+          </div>
+        </div>
+        <!--Nav bar 2-->
+        <div class="navigation">
+          <ul>
+            <li><a href="cat.html">Explore <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="addItem.html">Add item</a></li>
+            <li><a href="guide.html">Buyer guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="content">
+            <!--Found something tag-->
+            <div class="tagLine">
+                <div>
+                    <h1>Found something?</h1>
+                    <h2>Find prices, knowledge and more</h2>
+                </div>
+                <div>
+                    <button onclick="javascript:window.location='addItem.html'">Add item</button>
+                </div>
+            </div>
+            <h1 class="osFont">Add item</h1>
+            <div class="itemForm">
+                <form id="regForm" action="">
+                    <!-- One "tab" for each step in the form: -->
+                    <div class="tab"><h2>Description:</h2>
+                        <label>Item Name</label><br/>
+                        <input type="text" placeholder="Enter name here"><br/>
+                        <label>Description</label><br/>
+                        <textarea rows="4" placeholder="Enter description"></textarea><br/>
+                        <select>
+                            <option>Category</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Query">Question</option>
+                            <option value="Complaint">Complaint</option>
+                        </select>
+                        <select class="secondSelect">
+                            <option>Sub-Category</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Query">Question</option>
+                            <option value="Complaint">Complaint</option>
+                        </select><br/>
+                        <label>Manufacturer</label><br/>
+                        <input class="halfInput" type="text" placeholder="Enter manufacturer here"><br/>
+                        <label>Year of Manufacture</label><br/>
+                        <input class="halfInput" type="text" placeholder="yyyy"/><br/>
+                    </div>
+                    
+                    <div class="tab"><h2>Images:</h2>
+                        <label>Enter URL</label><br/>
+                        <input type="text" placeholder="Enter url of an image"><br/>
+                        <div class="uploadPanel">
+                            <input class="xlUpload" type="file" id="selectFiles" />
+                            <div class="icons">
+                              <i class="fas fa-upload"></i>
+                              <p>Drag and drop here <br/>Or click to browse</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab"><h2>Price:</h2>
+                        <label>Condition</label><br/>
+                        <input type="text" placeholder="Enter url of an image"><br/>
+                        <label>Price</label><br/>
+                        <p class="moneyIcon">£</p><input type="number" class="priceInput" placeholder="12345"/><br/>
+                        <label>Location you found this price</label><br/>
+                        <input type="text" placeholder="Enter location"><br/>
+                    </div>
+                    
+                    <div class="tab"><h2>Extra Details:</h2>
+                        <label>Weight</label><br/>
+                        <input type="text" placeholder="Enter weight in kg"><br/>
+                        <label>Dimensions</label><br/>
+                        <label>L:</label>
+                        <input class="diaInput" tpye="number" placeholder="12345"/>
+                        <label>mm</label>
+                        <label class="diaLabel">W:</label>
+                        <input class="diaInput" tpye="number" placeholder="12345"/>
+                        <label>mm</label>
+                        <label class="diaLabel">D:</label>
+                        <input class="diaInput" tpye="number" placeholder="12345"/>
+                        <label>mm</label><br/>
+                        <label>Other Versions</label><br/>
+                        <input type="text" placeholder="Enter version model numbers/variants etc"><br/>
+                        <label>Extra Notes</label><br/>
+                        <input type="text" placeholder="Enter notes"><br/>
+                        <label>Rarity</label><br/>
+                        <div class="stars">
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="tab"><h2>Confirm Submission:</h2>
+                        <label>Terms and Conditions</label>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                            sed diam nonumy eirmod tempor invidunt ut labore et 
+                            dolore magna aliquyam erat, sed diam voluptua. At vero 
+                            eos et accusam et justo duo dolores et ea rebum. Stet 
+                            clita kasd gubergren, no sea takimata sanctus est Lorem 
+                            ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                            consetetur sadipscing elitr, sed diam nonumy eirmod 
+                            tempor invidunt ut labore et dolore magna aliquyam erat, 
+                            sed diam voluptua. At vero eos et accusam et justo duo 
+                            dolores et ea rebum. Stet clita kasd gubergren, no sea 
+                            takimata sanctus est Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    
+                    <div style="overflow:auto;">
+                      <div style="float:right;">
+                        <button type="button" id="prevBtn" class="formBtnBack" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" class="formBtn" onclick="nextPrev(1)">Next</button>
+                      </div>
+                    </div>
+                    
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                      <span class="step"></span>
+                      <span class="step"></span>
+                      <span class="step"></span>
+                      <span class="step"></span>
+                      <span class="step"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <!--Footer-->
+        <div class="footer">
+          <div>
+            <div class="icon">
+              <h1>PackRat</h1>
+            </div>
+            <ul>
+              <li><i class="fab fa-facebook-square"></i></li>
+              <li><i class="fab fa-twitter-square"></i></li>
+              <li><i class="fab fa-youtube-square"></i></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Main pages</h2>
+            <ul>
+              <li><a href="addItem.html">Add item</a></li>
+              <li><a href="cat.html">Explore</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="guide.html">Buyer guide</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>User</h2>
+            <ul>
+              <li><a href="account.html">My account</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="inv.html">Inventory</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Categories</h2>
+            <div class="categories">
+              <ul>
+                <li>Appliances</li>
+                <li>Art</li>
+                <li>Books</li>
+                <li>Cameras</li>
+                <li>Furniture</li>
+              </ul>
+              <ul>
+                <li>Games</li>
+                <li>Jewellery</li>
+                <li>Lighting</li>
+                <li>Scientific</li>
+                <li>Timepieces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="lowerFooter">
+          <p>© 2020. All Rights Reserved.</p>
+        </div>
+        <!--Form script-->
+        <script>
+            var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
+
+            function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n)
+            }
+
+            function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+            }
+
+            function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                // and set the current valid status to false:
+                valid = true;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+            }
+
+            function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+            }
+        </script>
+         <!--Bootstrap-->
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

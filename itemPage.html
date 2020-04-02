@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>PackRat</title>
+        <!--CSS import-->
+        <link rel="stylesheet" href="CSS/main.css">
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+        <!--Font-Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <!--Nav bar 1-->
+        <div class="header">
+          <div class="icon">
+            <h1><a href="index.html">PackRat</a></h1>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Type in and hit enter">
+          </div>
+          <div class="addButton">
+            <button onclick="javascript:window.location='addItem.html'">Add item</button>
+          </div>
+          <div class="userSection">
+            <i class="far fa-user"></i>
+            <p>User</p>
+          </div>
+        </div>
+        <!--Nav bar 2-->
+        <div class="navigation">
+          <ul>
+            <li><a href="cat.html">Explore <i class="fas fa-chevron-down"></i></a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="addItem.html">Add item</a></li>
+            <li><a href="guide.html">Buyer guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="content">
+            <div class="topInfo">
+                <div>
+                    <!--Image grid-->                    
+                    <div class="container">
+                        <img id="expandedImg" src="Images/testCam (1).jpg" style="width:75%">
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                        <img src="Images/testCam (1).jpg" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="Images/testCam (2).jpg" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="Images/testCam (3).jpg" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="Images/testCam (2).jpg" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!--Inital info-->
+                    <h2 class="itemHeader">Polaroid Vintage Camera</h2>
+                    <ul class="initInfo">
+                        <li>Rating: 3.8</li>
+                        <li>ID: 0025</li>
+                        <li>Add/Edit Information</li>
+                        <li><i class="fas fa-check-circle"></i>Verified</li>
+                    </ul>
+                    <div class="itemButtons">
+                        <button><i class="fas fa-envelope"></i>Email to a friend</button>
+                        <button><i class="far fa-heart"></i>Add to wishlist</button>
+                        <button><i class="fas fa-cubes"></i>Add to pack</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="tabContainer">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Description</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Specification</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Ratings & Review</button>
+                  </div>
+                  
+                  <div id="London" class="tabcontent">
+                    <h3>Description</h3>
+                    <p>
+                        Polaroid 800 Land Camera, produced between 1957 and 1962 and used type-40 instant roll film that is no longer available. However, if you're handy with tools it can be 
+                        converted to use 100 pack film, which is still widely available new. This is difficult and Not for the faint of heart. The lens fitted to the Polaroid 800 (and 150) is in fact a very high 
+                        quality 3-element all-glass coated 130mm F8.8 lens. It will cover 3"x4" with no problem. 
+                    </p>
+                    <div class="moreInfoPoints">
+                        <ul>
+                            <li>Price range</li>
+                            <li>Manufacturer</li>
+                            <li>Year(s) Made</li>
+                            <li>Other Versions</li>
+                            <li>Dimensions</li>
+                            <li>Weight</li>
+                            <li>Rarity</li>
+                            <li>Other Details</li>
+                        </ul>
+                        <ul>
+                            <li>£10-£50</li>
+                            <li>Polaroid</li>
+                            <li>1957 - 1962</li>
+                            <li>Polaroid 800 SE</li>
+                            <li>11.2" x 6.2" x 1.7"</li>
+                            <li>1.2kg</li>
+                            <li><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></li>
+                            <li>http://camera-wiki.org/wiki/Polaroid_Model_800</li>
+                        </ul>
+                    </div>
+                  </div>
+                  
+                  <div id="Paris" class="tabcontent">
+                    <h3>Specification</h3>
+                    <p>Paris is the capital of France.</p> 
+                  </div>
+                  
+                  <div id="Tokyo" class="tabcontent">
+                    <h3>Ratings & Review</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+            </div>
+            <!--Found something tag-->
+            <div class="tagLine">
+                <div>
+                    <h1>Found something?</h1>
+                    <h2>Find prices, knowledge and more</h2>
+                </div>
+                <div>
+                    <button onclick="javascript:window.location='addItem.html'">Add item</button>
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="footer">
+          <div>
+            <div class="icon">
+              <h1>PackRat</h1>
+            </div>
+            <ul>
+              <li><i class="fab fa-facebook-square"></i></li>
+              <li><i class="fab fa-twitter-square"></i></li>
+              <li><i class="fab fa-youtube-square"></i></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Main pages</h2>
+            <ul>
+              <li><a href="addItem.html">Add item</a></li>
+              <li><a href="cat.html">Explore</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="guide.html">Buyer guide</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>User</h2>
+            <ul>
+              <li><a href="account.html">My account</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="inv.html">Inventory</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Categories</h2>
+            <div class="categories">
+              <ul>
+                <li>Appliances</li>
+                <li>Art</li>
+                <li>Books</li>
+                <li>Cameras</li>
+                <li>Furniture</li>
+              </ul>
+              <ul>
+                <li>Games</li>
+                <li>Jewellery</li>
+                <li>Lighting</li>
+                <li>Scientific</li>
+                <li>Timepieces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="lowerFooter">
+          <p>© 2020. All Rights Reserved.</p>
+        </div>
+        <!--Image gallery-->
+        <script>
+            function myFunction(imgs) {
+            // Get the expanded image
+            var expandImg = document.getElementById("expandedImg");
+            // Use the same src in the expanded image as the image being clicked on from the grid
+            expandImg.src = imgs.src;
+            // Show the container element (hidden with CSS)
+            expandImg.parentElement.style.display = "block";
+            }
+        </script>
+        <!--Tab scrips-->
+        <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+
+              
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+         <!--Bootstrap-->
+         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
